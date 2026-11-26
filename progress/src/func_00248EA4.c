@@ -1,0 +1,11 @@
+typedef struct { unsigned char pad[0xc]; unsigned int f; } S;
+unsigned int func_00248E9C(S *s) { return s->f; }
+
+struct Foo {
+    char pad[0x10];
+    S **items;
+};
+
+unsigned int func_00248EA4(struct Foo *a, s32 index) {
+    return func_00248E9C(a->items[index]);
+}

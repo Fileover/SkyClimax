@@ -1,0 +1,4 @@
+/* identical to func_000C3920 (matched), with its names changed by decompdecomp */
+extern s32 D_004CC610[];
+extern void func_00261668(void *);
+void func_002499B0(void *s) { *(u32 *)((char *)s + 0x0) = (u32)&D_004CC610; func_00261668(s); }

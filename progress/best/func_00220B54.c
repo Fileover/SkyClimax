@@ -1,0 +1,1 @@
+void func_00220B54(void *a0, void *a1, void *a2, void *a3, void *a4) { (*(void (*)(void *, void *, void *, void *, void *, void *, void *, void *))(void *)(*(u32 *)((char *)(void *)(*(u32 *)((char *)a0 + 0)) + 0x28)))(a0, (void *)0, a1, a2, a3, a4, (void *)(*(u32 *)((char *)(void *)(*(u32 *)((char *)a0 + 0)) + 0x28)), a3); }

@@ -1,0 +1,6 @@
+/* identical to func_00010F34 (matched), with its names changed by decompdecomp */
+void func_00186358(int a, u16 b) { *(volatile int *)0 = a + b; }
+
+void func_0018B958(void) {
+    func_00186358(1, (u16)-1);
+}

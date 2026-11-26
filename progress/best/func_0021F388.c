@@ -1,0 +1,3 @@
+typedef struct { vu32 v; } S;
+extern S B_016DA4F4[];
+u32 func_0021F388(void) { u32 x = B_016DA4F4[0].v + 1; B_016DA4F4[0].v = x; return B_016DA4F4[0].v; }

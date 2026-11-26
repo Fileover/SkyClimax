@@ -1,0 +1,1 @@
+void func_00220BAC(void *a0, void *a1, void *a2, void *a3) { (*(void (*)(void *, void *, void *, void *, void *, void *))(void *)(*(u32 *)((char *)(void *)(*(u32 *)((char *)a0 + 0)) + 0x28)))(a0, a1, a2, (void *)0, (void *)0, a3); }

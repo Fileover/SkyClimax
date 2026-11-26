@@ -1,0 +1,2 @@
+/* identical to func_001CF6C8 (matched), with its names changed by decompdecomp */
+void func_001CF6D8(u32 *s, u32 a1, u32 a2, u32 a3) { ((u32 *)s)[0] = (u32)a1; ((u32 *)s)[1] = (u32)a2; ((u32 *)s)[2] = (u32)a3; }

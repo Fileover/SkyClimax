@@ -1,0 +1,16 @@
+/* identical to func_0026867C (matched), with its names changed by decompdecomp */
+extern void func_0029186C(void);
+extern void func_0029181C(void);
+
+volatile int stub;
+__attribute__((noinline)) void func_002688A4(u32 a, u32 b, s32 c, s32 d);
+
+void func_002689FC(u32 a, u32 b) {
+    func_0029186C();
+    func_002688A4(a, b, 0, 0x7fffffff);
+    func_0029181C();
+}
+
+__attribute__((noinline)) void func_002688A4(u32 a, u32 b, s32 c, s32 d) {
+    stub = a + b + c + d;
+}

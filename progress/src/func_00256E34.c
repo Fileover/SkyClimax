@@ -1,0 +1,1 @@
+void func_00256E34(void *a0) { (*(void (*)(void *))(void *)(*(u32 *)((char *)(void *)(*(u32 *)((char *)(void *)(*(u32 *)((char *)a0 + 0x76c)) + 0)) + 0x18)))((void *)(*(u32 *)((char *)a0 + 0x76c))); }
