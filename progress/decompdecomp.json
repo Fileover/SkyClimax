@@ -25208,6 +25208,11 @@
    "vram": 2497924,
    "matched_by": "autopilot",
    "readable": false
+  },
+  "func_00261DB8": {
+   "vram": 2497976,
+   "matched_by": "autopilot",
+   "readable": false
   }
  },
  "layout": [
@@ -99527,6 +99532,18 @@
    "timeout": 20,
    "function": "func_00261D84",
    "vram": 2497924
+  },
+  "2432440:2497976": {
+   "toolchain": "ps3sdk-420",
+   "flags": [
+    "-Os",
+    "-falign-functions=4",
+    "-mno-minimal-toc",
+    "-fno-crossjumping"
+   ],
+   "timeout": 20,
+   "function": "func_00261DB8",
+   "vram": 2497976
   }
  }
 }
