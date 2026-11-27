@@ -1166,6 +1166,85 @@
    "vram": 2265380,
    "unit": "ppu",
    "mode": "rom"
+  },
+  "func_00261D84": {
+   "format": 1,
+   "verdict": "exact",
+   "abi": {
+    "arch": "ppc64",
+    "big_endian": true,
+    "gp": 0,
+    "platform": "ps3",
+    "rom_sha1": "064c379309150a550d4d544f47c1a43cb0678b8f"
+   },
+   "symbols_sha256": "e251a9a7f8f8180dce4fc0b58dccb586ba34a9fe98180c22a108fdd0112d620b",
+   "recorded_at": 1795747886.6908052,
+   "attempt_id": 4294970981,
+   "source_sha256": "26cf52274dd5a4f8e78fb3d13742e48505df9676c0d32b53fae57df04d336326",
+   "header_sha256": "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40",
+   "context_version": 2,
+   "compiler": {
+    "toolchain": "ps3sdk-420",
+    "flags": [
+     "-Os",
+     "-falign-functions=4",
+     "-mno-minimal-toc",
+     "-fno-crossjumping"
+    ],
+    "timeout": 20
+   },
+   "compiler_identity": {
+    "toolchain": "ps3sdk-420",
+    "registry_sha256": "6aab35a63157c0f43bc06de5455dd471c50af28e6cafcd61eec228f33ed2f7fd",
+    "install_sha256": null,
+    "executables": {}
+   },
+   "settings": {
+    "mode": "rom",
+    "platform": "ps3",
+    "compiler": {
+     "toolchain": "ps3sdk-420",
+     "flags": [
+      "-Os",
+      "-falign-functions=4",
+      "-mno-minimal-toc",
+      "-fno-crossjumping"
+     ],
+     "timeout": 20
+    },
+    "settings_source": "compile invocation snapshot",
+    "gp": 0,
+    "big_endian": true,
+    "rom": {
+     "sha1": "064c379309150a550d4d544f47c1a43cb0678b8f",
+     "game_code": "",
+     "region": "Unknown region",
+     "byte_order": "elf"
+    },
+    "effective_command": [
+     "E:\\Developer\\SDK\\PS3SDK_4.75\\host-win32\\ppu\\bin\\ppu-lv2-gcc.exe",
+     "-c",
+     "-Os",
+     "-falign-functions=4",
+     "-mno-minimal-toc",
+     "-fno-crossjumping",
+     "-IE:\\Developer\\SDK\\PS3SDK_4.75\\target\\ppu\\include",
+     "-IE:\\Developer\\SDK\\PS3SDK_4.75\\target\\common\\include",
+     "-I{include}",
+     "{src}",
+     "-o",
+     "{obj}"
+    ],
+    "language": "c",
+    "context_unit": "",
+    "scoring_revision": "47bbdce88d26a084925342809b03800e4d9b35ff15d9e0d83ff1d41670d60d44",
+    "context_sha256": "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40"
+   },
+   "target_sha256": "c322000403aa4715eb317b6aefa9f46e214559c921a04c66f0b56bfaf475357c",
+   "relocations_sha256": "5f66ffbd1ac817cd8266f1488c55a565f8bf5bd75a1d99014bdfbb507071127e",
+   "vram": 2497924,
+   "unit": "ppu",
+   "mode": "rom"
   }
  },
  "sources": {
@@ -1183,7 +1262,8 @@
   "3d7bba1d64d915e942ffc6c75251dfa6557b6a5fc9ee64d81b47b70496377390": "/* identical to func_002209E0 (matched), with its names changed by decompdecomp */\ntypedef struct { unsigned int f; } S;\nextern S B_016D9E1C;\nextern int B_016DA500;\n\nvolatile int stub;\n__attribute__((noinline)) void func_00221EE8(S *s) { stub = (int)s; }\n\nvoid func_00221F14(u32 *out) {\n    *out = 0;\n    if (--B_016DA500 == 0) {\n        func_00221EE8(&B_016D9E1C);\n    }\n}\n",
   "6f53206ca6bb55b6abcc19ca1b7b188468fac36c2622d964ab5af74daaef7b03": "/* identical to func_002209E0 (matched), with its names changed by decompdecomp */\ntypedef struct { unsigned int f; } S;\nextern S B_016D9E1C;\nextern int B_016DA504;\n\nvolatile int stub;\n__attribute__((noinline)) void func_00222750(S *s) { stub = (int)s; }\n\nvoid func_00222788(u32 *out) {\n    *out = 0;\n    if (--B_016DA504 == 0) {\n        func_00222750(&B_016D9E1C);\n    }\n}\n",
   "87b513cc8a910445071c846251a41443ce6d3b75736655657adb5157a5c5b944": "/* identical to func_0021F388 (matched), with its names changed by decompdecomp */\ntypedef struct { vu32 v; } S;\nextern S B_016DABE0[];\n\nvoid func_00225208(void) {\n    u32 x = B_016DABE0[0].v + 1;\n    B_016DABE0[0].v = x;\n    B_016DABE0[0].v;\n}\n",
-  "4d90b9a33c505d5be0e5b13c319405824ff31709ca583de9859b7a5ea7a58492": "/* identical to func_002290A0 (matched), with its names changed by decompdecomp */\nextern void *D_004CB5F0[];\n\ntypedef struct Derived {\n    void *vtable;\n    s32 b;\n    s32 c;\n    u32 f0c;\n    u32 f10;\n    u32 f14;\n    u32 f18;\n    u32 f1c;\n    u32 f20;\n    u32 f24;\n    u32 f28;\n    u32 f2c;\n    u32 f30;\n    u32 f34;\n    u32 f38;\n    u32 f3c;\n    u32 f40;\n    u8 f44;\n    u8 pad[0xff];\n    u32 f144;\n    u32 f148;\n    u32 f14c;\n    u32 f150;\n} Derived;\n\nvolatile int stub;\n__attribute__((noinline)) void func_00229070(void *self, s32 b) {\n    stub = (int)(long)self;\n}\n\nvoid func_00229124(Derived * __restrict self, s32 b) {\n    func_00229070(self, b);\n    self->vtable = D_004CB5F0;\n    self->f0c = 0;\n    self->f10 = 0;\n    self->f14 = 0;\n    self->f18 = 0;\n    self->f1c = 0;\n    self->f20 = 0;\n    self->f24 = 0;\n    self->f28 = 0;\n    self->f2c = 0;\n    self->f30 = 0;\n    self->f34 = 0;\n    self->f38 = 0;\n    self->f3c = 0;\n    self->f40 = 0;\n    self->f144 = 0;\n    self->f148 = 0;\n    self->f14c = 0;\n    self->f150 = 0;\n    self->f44 = 0;\n}\n"
+  "4d90b9a33c505d5be0e5b13c319405824ff31709ca583de9859b7a5ea7a58492": "/* identical to func_002290A0 (matched), with its names changed by decompdecomp */\nextern void *D_004CB5F0[];\n\ntypedef struct Derived {\n    void *vtable;\n    s32 b;\n    s32 c;\n    u32 f0c;\n    u32 f10;\n    u32 f14;\n    u32 f18;\n    u32 f1c;\n    u32 f20;\n    u32 f24;\n    u32 f28;\n    u32 f2c;\n    u32 f30;\n    u32 f34;\n    u32 f38;\n    u32 f3c;\n    u32 f40;\n    u8 f44;\n    u8 pad[0xff];\n    u32 f144;\n    u32 f148;\n    u32 f14c;\n    u32 f150;\n} Derived;\n\nvolatile int stub;\n__attribute__((noinline)) void func_00229070(void *self, s32 b) {\n    stub = (int)(long)self;\n}\n\nvoid func_00229124(Derived * __restrict self, s32 b) {\n    func_00229070(self, b);\n    self->vtable = D_004CB5F0;\n    self->f0c = 0;\n    self->f10 = 0;\n    self->f14 = 0;\n    self->f18 = 0;\n    self->f1c = 0;\n    self->f20 = 0;\n    self->f24 = 0;\n    self->f28 = 0;\n    self->f2c = 0;\n    self->f30 = 0;\n    self->f34 = 0;\n    self->f38 = 0;\n    self->f3c = 0;\n    self->f40 = 0;\n    self->f144 = 0;\n    self->f148 = 0;\n    self->f14c = 0;\n    self->f150 = 0;\n    self->f44 = 0;\n}\n",
+  "26cf52274dd5a4f8e78fb3d13742e48505df9676c0d32b53fae57df04d336326": "/* identical to func_00261504 (matched), with its names changed by decompdecomp */\nextern u32 D_004CCF80[];\n\ntypedef struct {\n    u32 vptr;\n    u32 a;\n    u32 b;\n    u32 c;\n    u32 d;\n    u32 e;\n    u32 f;\n    u32 g;\n    u32 h;\n    u32 i;\n} S;\n\nvoid func_00261D84(S *s, u32 a, u32 i, u32 d) {\n    s->vptr = (u32)&D_004CCF80;\n    s->a = a;\n    s->b = 0;\n    s->c = 0;\n    s->d = d;\n    s->e = 0;\n    s->f = 0;\n    s->g = 0;\n    s->h = 0;\n    s->i = i;\n}\n"
  },
  "headers": {
   "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40": "/* context.h for SkyClimax: shared by every function. Agents grow it with edit_context:\n * add a prototype or struct the moment you work one out, so the next function benefits. */\n\ntypedef signed char s8;\ntypedef unsigned char u8;\ntypedef signed short s16;\ntypedef unsigned short u16;\ntypedef signed int s32;\ntypedef unsigned int u32;\ntypedef signed long long s64;\ntypedef unsigned long long u64;\ntypedef float f32;\ntypedef double f64;\ntypedef volatile u8 vu8;\ntypedef volatile u16 vu16;\ntypedef volatile u32 vu32;\ntypedef volatile s32 vs32;\ntypedef int s32_bool;\n\n#define NULL ((void *)0)\n#define TRUE 1\n#define FALSE 0\n#define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))\n"
