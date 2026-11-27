@@ -1,7 +1,7 @@
 {
  "format": 2,
- "saved_at": 1795751259.7066474,
- "revision": 6667,
+ "saved_at": 1795751299.3612607,
+ "revision": 6669,
  "title": "SkyClimax",
  "platform": "ps3",
  "game": {
@@ -24261,7 +24261,7 @@
   },
   "func_0034C17C": {
    "vram": 3457404,
-   "matched_by": "@autopilot",
+   "matched_by": "autopilot",
    "readable": false
   },
   "func_0034C184": {
@@ -99770,6 +99770,18 @@
    "timeout": 20,
    "function": "func_0034C174",
    "vram": 3457396
+  },
+  "3391868:3457404": {
+   "toolchain": "ps3sdk-420",
+   "flags": [
+    "-Os",
+    "-falign-functions=4",
+    "-mno-minimal-toc",
+    "-fno-crossjumping"
+   ],
+   "timeout": 20,
+   "function": "func_0034C17C",
+   "vram": 3457404
   }
  }
 }
