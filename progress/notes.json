@@ -615,11 +615,6 @@
   "by": "manual-84fb7fd2c1ca4404"
  },
  {
-  "function": "func_0024A46C",
-  "text": "Best 110 (96.0%). Only diff: extra nop after bl func_00249D28 (TOC-restore artifact) and beq offset 0x58 vs 0x54. Pointer-typed param gives cmpwi cr7,r31,0 and correct regalloc. Stub approach worse (broke prologue). Leave to another model.",
-  "by": "manual-84fb7fd2c1ca4404"
- },
- {
   "function": "func_002209E0",
   "text": "Best 1310. Leaf bnelr + sibling tail call not producible in standalone C. Leave to another model.",
   "by": "manual-84fb7fd2c1ca4404"
@@ -3933,5 +3928,13 @@
   "function": "func_00300A00",
   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
   "by": "antigravity-gemini-3.8-flash-high-1"
+ },
+ {
+  "function": "func_0024A46C",
+  "text": "Best 110 (96.0%). Only diff: extra nop after bl func_00249D28 (TOC-restore artifact) and beq offset 0x58 vs 0x54. Pointer-typed param gives cmpwi cr7,r31,0 and correct regalloc. Stub approach worse (broke prologue). Leave to another model.",
+  "by": "manual-84fb7fd2c1ca4404",
+  "created_at": 1795746723.8640032,
+  "score_before": null,
+  "score_after": null
  }
 ]
