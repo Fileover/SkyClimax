@@ -23841,7 +23841,7 @@
   },
   "func_00335168": {
    "vram": 3363176,
-   "matched_by": "antigravity-gemini-3.8-flash-high-1",
+   "matched_by": "autopilot",
    "readable": false
   },
   "func_0033519C": {
@@ -99664,6 +99664,16 @@
   "31516:97052": {
    "vram": 97052,
    "function": "func_00017B1C",
+   "toolchain": "ps3sdk-420",
+   "flags": [
+    "-O2",
+    "-falign-functions=4"
+   ],
+   "timeout": 20
+  },
+  "3297640:3363176": {
+   "function": "func_00335168",
+   "vram": 3363176,
    "toolchain": "ps3sdk-420",
    "flags": [
     "-O2",
