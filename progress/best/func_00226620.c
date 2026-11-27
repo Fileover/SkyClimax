@@ -2,8 +2,8 @@ extern char STR_0045C440[];
 extern char STR_0045C448[];
 
 volatile int stub;
-__attribute__((noinline)) u32 func_002265B4(void *a, u32 b, const char *c) { stub = (u64)a; return stub; }
-__attribute__((noinline)) s32 func_00226548(void *a, u32 b, const char *c) { stub = (u64)a; return stub; }
+__attribute__((noinline)) u32 func_002265B4(void *a, s32 b, const char *c) { stub = (u64)a; return stub; }
+__attribute__((noinline)) s32 func_00226548(void *a, s32 b, const char *c) { stub = (u64)a; return stub; }
 
 typedef struct {
     u8 pad[0xc];

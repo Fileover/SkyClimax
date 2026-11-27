@@ -27,8 +27,12 @@ void func_002E9F48(CondWrap *wrap) {
             char *err = func_002FDB78(ret);
             func_002E9954(STR_0046BA48, name, ret, err);
         }
-        wrap->cond[1] = D_003D3530[1];
-        wrap->cond[0] = D_003D3530[0];
+        {
+            u32 b = D_003D3530[1];
+            u32 a = D_003D3530[0];
+            wrap->cond[1] = b;
+            wrap->cond[0] = a;
+        }
     }
     func_002D021C(wrap);
 }

@@ -8,8 +8,9 @@ extern Manager B_016DA508;
 void func_00217564(void *);
 
 void func_00222E84(void) {
-    void **it = B_016DA508.entries;
-    void **end = &B_016DA508.entries[5];
+    char *base = (char *)&B_016DA508;
+    void **end = (void **)(base + 0x18);
+    void **it = (void **)(base + 4);
     do {
         func_00217564(*it++);
     } while (it != end);

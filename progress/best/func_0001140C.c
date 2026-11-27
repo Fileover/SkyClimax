@@ -22,14 +22,14 @@ void func_0001140C(S *s) {
 
 tail:
     switch (s->field_40) {
+        case 3:
+            if (s->type == 1) goto call_44;
+            break;
         case 1:
         case 2:
             if (s->type == 1) goto call_44;
             if (s->type == 3) goto call_44;
             if (s->type == 2) goto call_44;
-            break;
-        case 3:
-            if (s->type == 1) goto call_44;
             break;
     }
 

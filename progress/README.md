@@ -7,13 +7,13 @@ judge accepted them as matches.
 ## Project details
 
 <!-- decompdecomp:details:start -->
-- **Game:** PlayStation 3 game
+- **Game:** SkyClimax
 - **Platform:** ps3
 - **Compiler:** ps3sdk-420
 <!-- decompdecomp:details:end -->
 <!-- decompdecomp:progress:start -->
-- **Progress:** 3149 matching function(s), 383 best attempt(s)
-- **Completion:** 3,149 / 11,650 functions (27.0%). 208 set aside, excluded from completion.
+- **Progress:** 2986 matching function(s), 568 best attempt(s)
+- **Completion:** 2,986 / 11,517 functions (25.9%). 341 set aside, excluded from completion.
 <!-- decompdecomp:progress:end -->
 
 ## What's in this folder

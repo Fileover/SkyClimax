@@ -1,4 +1,4 @@
-extern void sysPrxForUser_sysThreadInitialzeTLS(void *, u32, u32, u32);
+extern void sysPrxForUser_sysThreadInitialzeTLS(void *);
 extern void func_000ED2A4(void);
 extern void func_002AC518(void *, void *);
 extern void func_002A7D28(void);
@@ -29,7 +29,7 @@ void func_00010354(u64 argc, u32 *argv, u32 *envp, u64 envc, void *a5, u32 a6, u
     u32 *p;
     u32 *dst;
 
-    sysPrxForUser_sysThreadInitialzeTLS(a5, a6, a7, a8);
+    sysPrxForUser_sysThreadInitialzeTLS(a5);
 
     dst = argv;
     p = argv + 1;

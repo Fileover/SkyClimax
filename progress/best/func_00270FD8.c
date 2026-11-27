@@ -1,4 +1,3 @@
-/* identical to func_00270F68 (matched), with its names changed by decompdecomp */
 extern const char STR_00463A08[];
 
 void func_0029186C(void);

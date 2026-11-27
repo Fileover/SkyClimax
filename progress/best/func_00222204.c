@@ -1,4 +1,4 @@
-extern void *B_016D9E1C;
+extern char B_016D9E1C[];
 
 typedef struct MyObj MyObj;
 
