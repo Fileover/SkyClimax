@@ -2522,6 +2522,85 @@
    "vram": 3457372,
    "unit": "ppu",
    "mode": "rom"
+  },
+  "func_0034C164": {
+   "format": 1,
+   "verdict": "exact",
+   "abi": {
+    "arch": "ppc64",
+    "big_endian": true,
+    "gp": 0,
+    "platform": "ps3",
+    "rom_sha1": "064c379309150a550d4d544f47c1a43cb0678b8f"
+   },
+   "symbols_sha256": "e251a9a7f8f8180dce4fc0b58dccb586ba34a9fe98180c22a108fdd0112d620b",
+   "recorded_at": 1795751132.065421,
+   "attempt_id": 4294971153,
+   "source_sha256": "e99352e4290b1d35dfeecea11d9af18e98ed26064987f7b8653036a32e32ea99",
+   "header_sha256": "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40",
+   "context_version": 2,
+   "compiler": {
+    "toolchain": "ps3sdk-420",
+    "flags": [
+     "-Os",
+     "-falign-functions=4",
+     "-mno-minimal-toc",
+     "-fno-crossjumping"
+    ],
+    "timeout": 20
+   },
+   "compiler_identity": {
+    "toolchain": "ps3sdk-420",
+    "registry_sha256": "6aab35a63157c0f43bc06de5455dd471c50af28e6cafcd61eec228f33ed2f7fd",
+    "install_sha256": null,
+    "executables": {}
+   },
+   "settings": {
+    "mode": "rom",
+    "platform": "ps3",
+    "compiler": {
+     "toolchain": "ps3sdk-420",
+     "flags": [
+      "-Os",
+      "-falign-functions=4",
+      "-mno-minimal-toc",
+      "-fno-crossjumping"
+     ],
+     "timeout": 20
+    },
+    "settings_source": "compile invocation snapshot",
+    "gp": 0,
+    "big_endian": true,
+    "rom": {
+     "sha1": "064c379309150a550d4d544f47c1a43cb0678b8f",
+     "game_code": "",
+     "region": "Unknown region",
+     "byte_order": "elf"
+    },
+    "effective_command": [
+     "E:\\Developer\\SDK\\PS3SDK_4.75\\host-win32\\ppu\\bin\\ppu-lv2-gcc.exe",
+     "-c",
+     "-Os",
+     "-falign-functions=4",
+     "-mno-minimal-toc",
+     "-fno-crossjumping",
+     "-IE:\\Developer\\SDK\\PS3SDK_4.75\\target\\ppu\\include",
+     "-IE:\\Developer\\SDK\\PS3SDK_4.75\\target\\common\\include",
+     "-I{include}",
+     "{src}",
+     "-o",
+     "{obj}"
+    ],
+    "language": "c",
+    "context_unit": "",
+    "scoring_revision": "47bbdce88d26a084925342809b03800e4d9b35ff15d9e0d83ff1d41670d60d44",
+    "context_sha256": "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40"
+   },
+   "target_sha256": "5315bafab4cd268526dda06af691f794685be0b584bcb0ef75a1afb91e9e31bc",
+   "relocations_sha256": "136bd6d0da2e2236203dc93ca2d1e9eb858e66caaf758bc883f2578f6f7c159b",
+   "vram": 3457380,
+   "unit": "ppu",
+   "mode": "rom"
   }
  },
  "sources": {
@@ -2557,7 +2636,8 @@
   "6a3354d15381d01018beeac7f21c9df6aac263da33ca599af6d3945915afee47": "/* identical to func_0023433C (matched), with its names changed by decompdecomp */\ntypedef struct \n{\n  void (*fn)(void *);\n} Obj;\nvoid func_002483C0(void *p)\n{\n  void *new_var;\n  new_var = p;\n  if (p)\n  {\n    Obj *o = *((Obj **) new_var);\n    void (**f)(void *) = (void (**)(void *)) (((char *) o) + 8);\n    (*f)(p);\n  }\n}\n\n",
   "088a91839027c69e9e8bac04caa6c59e87f7a803d8d46ac0b5b433caa7976a90": "/* identical to func_00152FEC (matched), with its names changed by decompdecomp */\ntypedef struct \n{\n  f32 x;\n  f32 y;\n  f32 z;\n} Vec3;\nvoid func_0015302C(Vec3 *out, const Vec3 *a, const Vec3 *b, f32 t)\n{\n  f32 new_var;\n  new_var = t;\n  out->x = a->x + ((b->x - a->x) * new_var);\n  out->y = a->y + ((b->y - a->y) * t);\n  out->z = a->z + ((b->z - a->z) * t);\n}\n\n",
   "21c3b8022b01cd5350a51f8a9def0ef86b14353fe0fc15fde944a393472343f2": "volatile int dummy;\n__attribute__((noinline)) void func_0023B124(s64 a) { dummy = 1; }\n\nvoid func_0034C154(s64 a) {\n    func_0023B124(a - 4);\n}\n",
-  "f86233087bb44270cfbbf13a5c3a86a9d162530b587e297a610338eba3074d11": "/* identical to func_0034C154 (matched), with its names changed by decompdecomp */\nvolatile int dummy;\n__attribute__((noinline)) void func_0023B164(s64 a) { dummy = 1; }\n\nvoid func_0034C15C(s64 a) {\n    func_0023B164(a - 4);\n}\n"
+  "f86233087bb44270cfbbf13a5c3a86a9d162530b587e297a610338eba3074d11": "/* identical to func_0034C154 (matched), with its names changed by decompdecomp */\nvolatile int dummy;\n__attribute__((noinline)) void func_0023B164(s64 a) { dummy = 1; }\n\nvoid func_0034C15C(s64 a) {\n    func_0023B164(a - 4);\n}\n",
+  "e99352e4290b1d35dfeecea11d9af18e98ed26064987f7b8653036a32e32ea99": "/* identical to func_0034C154 (matched), with its names changed by decompdecomp */\nvolatile int dummy;\n__attribute__((noinline)) void func_0023B190(s64 a) { dummy = 1; }\n\nvoid func_0034C164(s64 a) {\n    func_0023B190(a - 4);\n}\n"
  },
  "headers": {
   "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40": "/* context.h for SkyClimax: shared by every function. Agents grow it with edit_context:\n * add a prototype or struct the moment you work one out, so the next function benefits. */\n\ntypedef signed char s8;\ntypedef unsigned char u8;\ntypedef signed short s16;\ntypedef unsigned short u16;\ntypedef signed int s32;\ntypedef unsigned int u32;\ntypedef signed long long s64;\ntypedef unsigned long long u64;\ntypedef float f32;\ntypedef double f64;\ntypedef volatile u8 vu8;\ntypedef volatile u16 vu16;\ntypedef volatile u32 vu32;\ntypedef volatile s32 vs32;\ntypedef int s32_bool;\n\n#define NULL ((void *)0)\n#define TRUE 1\n#define FALSE 0\n#define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))\n"
