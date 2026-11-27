@@ -2145,6 +2145,79 @@
    "vram": 3363176,
    "unit": "ppu",
    "mode": "rom"
+  },
+  "func_0033519C": {
+   "format": 1,
+   "verdict": "exact",
+   "abi": {
+    "arch": "ppc64",
+    "big_endian": true,
+    "gp": 0,
+    "platform": "ps3",
+    "rom_sha1": "064c379309150a550d4d544f47c1a43cb0678b8f"
+   },
+   "symbols_sha256": "e251a9a7f8f8180dce4fc0b58dccb586ba34a9fe98180c22a108fdd0112d620b",
+   "recorded_at": 1795749277.2287686,
+   "attempt_id": 4294971104,
+   "source_sha256": "15cd2610957c93398bab00be0e2bc9ecb417f0f91964912df31aa72554532d23",
+   "header_sha256": "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40",
+   "context_version": 2,
+   "compiler": {
+    "toolchain": "ps3sdk-420",
+    "flags": [
+     "-O2",
+     "-falign-functions=4"
+    ],
+    "timeout": 20
+   },
+   "compiler_identity": {
+    "toolchain": "ps3sdk-420",
+    "registry_sha256": "6aab35a63157c0f43bc06de5455dd471c50af28e6cafcd61eec228f33ed2f7fd",
+    "install_sha256": null,
+    "executables": {}
+   },
+   "settings": {
+    "mode": "rom",
+    "platform": "ps3",
+    "compiler": {
+     "toolchain": "ps3sdk-420",
+     "flags": [
+      "-O2",
+      "-falign-functions=4"
+     ],
+     "timeout": 20
+    },
+    "settings_source": "compile invocation snapshot",
+    "gp": 0,
+    "big_endian": true,
+    "rom": {
+     "sha1": "064c379309150a550d4d544f47c1a43cb0678b8f",
+     "game_code": "",
+     "region": "Unknown region",
+     "byte_order": "elf"
+    },
+    "effective_command": [
+     "E:\\Developer\\SDK\\PS3SDK_4.75\\host-win32\\ppu\\bin\\ppu-lv2-gcc.exe",
+     "-c",
+     "-O2",
+     "-falign-functions=4",
+     "-IE:\\Developer\\SDK\\PS3SDK_4.75\\target\\ppu\\include",
+     "-IE:\\Developer\\SDK\\PS3SDK_4.75\\target\\common\\include",
+     "-I{include}",
+     "{src}",
+     "-o",
+     "{obj}"
+    ],
+    "language": "c",
+    "context_unit": "",
+    "scoring_revision": "47bbdce88d26a084925342809b03800e4d9b35ff15d9e0d83ff1d41670d60d44",
+    "context_sha256": "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40"
+   },
+   "target_sha256": "89322e08167ae94d3f0714d7831fc5dde8f8accf6a61ec4208525aff8b311610",
+   "relocations_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+   "vram": 3363228,
+   "unit": "ppu",
+   "mode": "rom"
   }
  },
  "sources": {
@@ -2175,7 +2248,8 @@
   "bf0bf814c8eef29eb787f03cb06f18842271e40b7d343c86862f1265c7c8506a": "extern u32 D_003D3530[];\nextern const char D_0046BAB8[];\nextern const char STR_0046BB00[];\n\nint sysPrxForUser_sysLwMutexDestroy(void *);\nchar *func_002FDB78(int);\nvoid func_002D021C(void *);\n\nextern volatile int D_dummy;\nstatic void __attribute__((noinline)) func_002E9954(const char *fmt, ...) {\n    D_dummy = 1;\n}\n\ntypedef struct {\n    u32 unk0[2];\n    char *name;\n    u32 padC;\n    u32 mutex[6];\n} MutexWrap;\n\nvoid func_002EADC8(MutexWrap *wrap) {\n    u32 *mutex = wrap->mutex;\n    int ret;\n\n    if (__builtin_expect(D_003D3530[4] == mutex[2], 0))\n        goto invalid;\n\n    ret = sysPrxForUser_sysLwMutexDestroy(mutex);\n    if (__builtin_expect(ret != 0, 0))\n        goto failed;\n\ndone:\n    func_002D021C(wrap);\n    return;\n\ninvalid:\n    func_002E9954(STR_0046BB00, wrap->name);\n    goto done;\n\nfailed: {\n        char *name = wrap->name;\n        char *err = func_002FDB78(ret);\n        func_002E9954(D_0046BAB8, name, ret, err);\n        goto done;\n    }\n}\n",
   "8e8d7aa124193b98d33ba07f76205d01b759a7f4880e02dbb1feeab4943779f2": "typedef void (*Fn)(u32);\ntypedef struct { u64 a; } Obj;\nvolatile int dd_stub;\n__attribute__((noinline)) void func_00249D28(u32 v) { dd_stub = v; }\nvoid func_0024A46C(Obj *p) {\n    u32 v = (u32)(u64)p;\n    func_00249D28(v);\n    if (p) {\n        Fn *vt = *(Fn **)p;\n        (*vt[1])(v);\n    }\n}\n",
   "bc534a4ec3d2866599593140342ad6abbbfc71b0ae714a3cb2698a993ce29303": "s32 func_00017B1C(u32 *p, f32 *src)\n{\n  u32 v = *p;\n  if (0 == v)\n  {\n    return 0;\n  }\n  f32 *dst = (f32 *) ((u32) ((u64) v));\n  dst[0x34 / 4] = src[0];\n  dst[0x38 / 4] = src[1];\n  dst[0x3c / 4] = src[2];\n  return 1;\n}\n\n",
-  "004be707656034f9dc0c9b065287e4db0d75d895ff5cc473cf54698115aab8a7": "typedef struct {\n    u32 x, y, z;\n} Vec3;\n\ntypedef struct {\n    Vec3 v1;\n    Vec3 v2;\n} S;\n\nvoid func_00335168(S *dst, const Vec3 *a, const Vec3 *b) {\n    dst->v1 = *a;\n    dst->v2 = *b;\n}\n"
+  "004be707656034f9dc0c9b065287e4db0d75d895ff5cc473cf54698115aab8a7": "typedef struct {\n    u32 x, y, z;\n} Vec3;\n\ntypedef struct {\n    Vec3 v1;\n    Vec3 v2;\n} S;\n\nvoid func_00335168(S *dst, const Vec3 *a, const Vec3 *b) {\n    dst->v1 = *a;\n    dst->v2 = *b;\n}\n",
+  "15cd2610957c93398bab00be0e2bc9ecb417f0f91964912df31aa72554532d23": "/* identical to func_00335168 (matched), with its names changed by decompdecomp */\ntypedef struct {\n    u32 x, y, z;\n} Vec3;\n\ntypedef struct {\n    Vec3 v1;\n    Vec3 v2;\n} S;\n\nvoid func_0033519C(S *dst, const Vec3 *a, const Vec3 *b) {\n    dst->v1 = *a;\n    dst->v2 = *b;\n}\n"
  },
  "headers": {
   "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40": "/* context.h for SkyClimax: shared by every function. Agents grow it with edit_context:\n * add a prototype or struct the moment you work one out, so the next function benefits. */\n\ntypedef signed char s8;\ntypedef unsigned char u8;\ntypedef signed short s16;\ntypedef unsigned short u16;\ntypedef signed int s32;\ntypedef unsigned int u32;\ntypedef signed long long s64;\ntypedef unsigned long long u64;\ntypedef float f32;\ntypedef double f64;\ntypedef volatile u8 vu8;\ntypedef volatile u16 vu16;\ntypedef volatile u32 vu32;\ntypedef volatile s32 vs32;\ntypedef int s32_bool;\n\n#define NULL ((void *)0)\n#define TRUE 1\n#define FALSE 0\n#define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))\n"
