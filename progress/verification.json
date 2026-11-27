@@ -1555,6 +1555,85 @@
    "vram": 2728512,
    "unit": "ppu",
    "mode": "rom"
+  },
+  "func_0029C834": {
+   "format": 1,
+   "verdict": "exact",
+   "abi": {
+    "arch": "ppc64",
+    "big_endian": true,
+    "gp": 0,
+    "platform": "ps3",
+    "rom_sha1": "064c379309150a550d4d544f47c1a43cb0678b8f"
+   },
+   "symbols_sha256": "e251a9a7f8f8180dce4fc0b58dccb586ba34a9fe98180c22a108fdd0112d620b",
+   "recorded_at": 1795747902.2826521,
+   "attempt_id": 4294970989,
+   "source_sha256": "0012aab2e63b7cd1596ce18abf16c1fb5c4368f809ac4c8f628651c2495e610d",
+   "header_sha256": "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40",
+   "context_version": 2,
+   "compiler": {
+    "toolchain": "ps3sdk-420",
+    "flags": [
+     "-Os",
+     "-falign-functions=4",
+     "-mno-minimal-toc",
+     "-fno-crossjumping"
+    ],
+    "timeout": 20
+   },
+   "compiler_identity": {
+    "toolchain": "ps3sdk-420",
+    "registry_sha256": "6aab35a63157c0f43bc06de5455dd471c50af28e6cafcd61eec228f33ed2f7fd",
+    "install_sha256": null,
+    "executables": {}
+   },
+   "settings": {
+    "mode": "rom",
+    "platform": "ps3",
+    "compiler": {
+     "toolchain": "ps3sdk-420",
+     "flags": [
+      "-Os",
+      "-falign-functions=4",
+      "-mno-minimal-toc",
+      "-fno-crossjumping"
+     ],
+     "timeout": 20
+    },
+    "settings_source": "compile invocation snapshot",
+    "gp": 0,
+    "big_endian": true,
+    "rom": {
+     "sha1": "064c379309150a550d4d544f47c1a43cb0678b8f",
+     "game_code": "",
+     "region": "Unknown region",
+     "byte_order": "elf"
+    },
+    "effective_command": [
+     "E:\\Developer\\SDK\\PS3SDK_4.75\\host-win32\\ppu\\bin\\ppu-lv2-gcc.exe",
+     "-c",
+     "-Os",
+     "-falign-functions=4",
+     "-mno-minimal-toc",
+     "-fno-crossjumping",
+     "-IE:\\Developer\\SDK\\PS3SDK_4.75\\target\\ppu\\include",
+     "-IE:\\Developer\\SDK\\PS3SDK_4.75\\target\\common\\include",
+     "-I{include}",
+     "{src}",
+     "-o",
+     "{obj}"
+    ],
+    "language": "c",
+    "context_unit": "",
+    "scoring_revision": "47bbdce88d26a084925342809b03800e4d9b35ff15d9e0d83ff1d41670d60d44",
+    "context_sha256": "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40"
+   },
+   "target_sha256": "d7349c4de142da86198cb78d576ca4cb997a0ed5bc5bc8d27fc551d7ccf2c32f",
+   "relocations_sha256": "ee6497d422e42eeefb2b8a53a598bc5c48c20b75d8449920a1001af4743bba11",
+   "vram": 2738228,
+   "unit": "ppu",
+   "mode": "rom"
   }
  },
  "sources": {
@@ -1577,7 +1656,8 @@
   "efdafe79d1d76f799cb6c3fa064f5ea2d81605038bef8b338dfa886b816a6535": "/* identical to func_00261538 (matched), with its names changed by decompdecomp */\nextern u32 D_004CCF80[];\n\ntypedef struct {\n    u32 vptr;\n    u32 a;\n    u32 b;\n    u32 c;\n    u32 d;\n    u32 e;\n    u32 f;\n    u32 g;\n    u32 h;\n    u32 i;\n} S;\n\nvoid func_00261DB8(S *s, u32 a, u32 i, u32 e, u32 f, u32 g, u32 h) {\n    s->vptr = (u32)&D_004CCF80;\n    s->a = a;\n    s->b = 0;\n    s->c = 0;\n    s->d = 0;\n    s->e = e;\n    s->f = f;\n    s->g = g;\n    s->h = h;\n    s->i = i;\n}\n",
   "824ffde2436547ceb0c9808141fcb7905da4f36306f88dc07577a3311f8cf6e3": "/* identical to func_00261DEC (matched), with its names changed by decompdecomp */\nextern u32 D_004CCFC0[];\n\ntypedef struct {\n    u32 vptr;\n    u32 a;\n    u32 b;\n    u32 c;\n    u32 d;\n    u32 e;\n    u32 f;\n    u32 g;\n    u32 h;\n    u32 i;\n    f32 j;\n    f32 k;\n} S;\n\nvoid func_00261E2C(S *s, u32 a, u32 b, u32 c, u32 d) {\n    s->vptr = (u32)&D_004CCFC0;\n    s->a = a;\n    s->b = b;\n    s->c = c;\n    s->d = d;\n    s->e = 0;\n    s->f = 0;\n    s->g = 0;\n    s->h = 0;\n    s->i = 0;\n    s->j = 1.0f;\n    s->k = 1.0f;\n}\n",
   "c5798d2d88625ccf198507942f27c170dbd613305cc47d474f26f4ea85f3c401": "/* identical to func_00284570 (matched), with its names changed by decompdecomp */\nvolatile int stub;\n__attribute__((noinline)) void func_00284288(void) { stub = 1; }\n__attribute__((noinline)) void func_0028431C(void) { stub = 2; }\n\nextern u32 B_016E8788[];\ns32 func_00287038(u32, u32, u32, u32);\n\ns32 func_002845DC(u32 a, u32 b, u32 c) {\n    s32 ret;\n    func_00284288();\n    ret = func_00287038(B_016E8788[2], a, b, c);\n    func_0028431C();\n    return ret;\n}\n",
-  "303954f435d42043cb517b69fe4244254415ed9f16a976033feb909cf6626c82": "/* identical to func_00294BCC (matched), with its names changed by decompdecomp */\nextern u32 D_00571340;\nextern u32 D_00553F70;\n\nvoid func_0029A240(u32 *a, u32 *b) {\n    if (a != 0) {\n        *a = D_00571340;\n    }\n    if ((u32)b != 0) {\n        *b = D_00553F70;\n    }\n}\n"
+  "303954f435d42043cb517b69fe4244254415ed9f16a976033feb909cf6626c82": "/* identical to func_00294BCC (matched), with its names changed by decompdecomp */\nextern u32 D_00571340;\nextern u32 D_00553F70;\n\nvoid func_0029A240(u32 *a, u32 *b) {\n    if (a != 0) {\n        *a = D_00571340;\n    }\n    if ((u32)b != 0) {\n        *b = D_00553F70;\n    }\n}\n",
+  "0012aab2e63b7cd1596ce18abf16c1fb5c4368f809ac4c8f628651c2495e610d": "/* identical to func_00294BCC (matched), with its names changed by decompdecomp */\nextern u32 D_00571348;\nextern u32 D_00557240;\n\nvoid func_0029C834(u32 *a, u32 *b) {\n    if (a != 0) {\n        *a = D_00571348;\n    }\n    if ((u32)b != 0) {\n        *b = D_00557240;\n    }\n}\n"
  },
  "headers": {
   "e937e0ffbd46e7f98fb336276751bc4c9405b66a0c32b66a6b9672bc7e5e7c40": "/* context.h for SkyClimax: shared by every function. Agents grow it with edit_context:\n * add a prototype or struct the moment you work one out, so the next function benefits. */\n\ntypedef signed char s8;\ntypedef unsigned char u8;\ntypedef signed short s16;\ntypedef unsigned short u16;\ntypedef signed int s32;\ntypedef unsigned int u32;\ntypedef signed long long s64;\ntypedef unsigned long long u64;\ntypedef float f32;\ntypedef double f64;\ntypedef volatile u8 vu8;\ntypedef volatile u16 vu16;\ntypedef volatile u32 vu32;\ntypedef volatile s32 vs32;\ntypedef int s32_bool;\n\n#define NULL ((void *)0)\n#define TRUE 1\n#define FALSE 0\n#define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))\n"
